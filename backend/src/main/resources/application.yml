@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: mini-scheduler
+  profiles:
+    active: master
+
+server:
+  port: 8080
+
+---
+spring:
+  config:
+    activate:
+      on-profile: worker
+
+server:
+  port: 8081
+
+worker:
+  host: localhost
+  port: 8081
+  master:
+    url: http://localhost:8080
