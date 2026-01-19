@@ -16,7 +16,7 @@ public class WorkerNode {
     @Value("${worker.port:8081}")
     private int port;
 
-    @Value("${master.url:http://localhost:8080}")
+    @Value("${worker.master.url:http://localhost:8080}")
     private String masterUrl;
 
     private String id;
